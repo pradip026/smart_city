@@ -1,0 +1,1 @@
+web: gunicorn Smart_hospital.wsgi

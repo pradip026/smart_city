@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ title }}</title>
+</head>
+{% load static %}
+{% include 'head.html' %}
+<body>
+{% include 'navbar.html' %}
+<div class="container" style="margin-top:200px; padding-bottom:120px; margin-left:200px; padding-right:10px;">
+    <div class="col-sm-4">
+
+        <div class="card" style="width: 18rem;">
+          <img src="{% static 'img/pradip.jpg' %}" class="card-img-top"  style="height:200px; weidth:200px;" alt="Pradip">
+          <div class="card-body">
+            <h5 class="card-title">Pradip Pandit</h5>
+            <p class="card-text">Undergraduate in BE-IT. Full-stack developer and highly skilled in web technologies, AI and competitive programming.</p>
+            <a href="https://www.linkedin.com/in/pradip-pandit-13b754169/" class="btn btn-primary">Linked_in</a>
+          </div>
+        </div>
+    </div>
+
+
+<div class="col-sm-4">
+<div class="card" style="width: 18rem;">
+  <img src="{% static 'img/amrit .jpg' %}" class="card-img-top" style="height:200px; weidth:200px;" alt="Amrit">
+  <div class="card-body">
+    <h5 class="card-title">Amrit Pandit</h5>
+    <p class="card-text">Undergraduate in software engineering, Good knowledge and experience in Front-end programme.Also I have interest on AI.</p>
+    <a href="https://www.linkedin.com/in/amrit-pandit-90615217b/" class="btn btn-primary">Linked_in</a>
+  </div>
+</div>
+</div>
+
+
+<div class="col-sm-4">
+<div class="card" style="width: 18rem;">
+  <img src="{% static 'img/ajaya.jpg' %}"  class="card-img-top" style="height:200px; weidth:200px;" alt="Ajaya">
+  <div class="card-body">
+    <h5 class="card-title">Ajaya Pandit</h5>
+    <p class="card-text">Undergraduate in management and business strategy and have contribution to study current market and project budget analysis.</p>
+    <a href="https://devpost.com/ajaypandit9806?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" class="btn btn-primary">Devpost</a>
+  </div>
+</div>
+</div>
+
+</div>
+{% include 'footer.html' %}
+{% include 'scripts.html' %}
+
+</body>
+</html>

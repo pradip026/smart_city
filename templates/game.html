@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/pig_game.css' %}" rel="stylesheet" type="text/css"/>
+    <title>Pig Game</title>
+</head>
+
+<body>
+<section id="greetings">
+
+    <div class='welcome'>
+        <section id="message">
+            <h1>Pig - Dice Game</h1>
+            <br>
+            <ul>
+                <li>The game has 2 players, playing in rounds</li>
+                <li>In each turn, a player rolls a dice as many times as he wishes. Each result get added to his ROUND
+                    score
+                </li>
+                <li>If the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn</li>
+                <li>The player can choose 'Hold', which means that his ROUND score gets added to his GLOBAL score. It
+                    switches turns
+                </li>
+                <li>The first player to reach 100 points on GLOBAL score wins the game</li>
+            </ul>
+        </section>
+
+        <div id="flipper1" class="box">
+            <div class="back">
+                <p>Pig is a simple dice game first described in print by John Scarne in 1945. As with many games of folk
+                    origin, Pig is played with many rule variations. Commercial variants of Pig include Pass the Pigs,
+                    Pig Dice, and Skunk. Pig is commonly used by mathematics teachers to teach probability concepts.
+
+                </p>
+            </div>
+            <div class="front">
+                <img src="{% static 'img/dice_img/info2.jpg'%}" alt="image">
+            </div>
+        </div>
+        <div id='flipper2' class="box">
+            <div class="back">
+                <p>Yahtzee is another dice game made by Milton Bradley (now owned by Hasbro), which was first marketed as
+                    "Yatzie" by the National Association Service of Toledo, Ohio, in the early 1940s. Yatzie was
+                    included in a game set called "LUCK - 15 Grand Dice Games".</p>
+            </div>
+            <div class="front">
+
+                <img src="{% static 'img/dice_img/info1.jpg'%}" alt="image">
+            </div>
+        </div>
+    </div>
+        <button class="btn-start" onclick="return false;" onmousedown="autoScrollTo('game');"><i class="ion-ios-arrow-right"></i>Start Game</button>
+
+</section>
+<section id="game" class="hide">
+    <div class="wrapper clearfix">
+        <div class="player-0-panel active">
+            <div class="player-name" id="name-0">Player 1</div>
+            <div class="player-score" id="score-0">43</div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-0">11</div>
+            </div>
+        </div>
+
+        <div class="player-1-panel">
+            <div class="player-name" id="name-1">Player 2</div>
+            <div class="player-score" id="score-1">72</div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-1">0</div>
+            </div>
+        </div>
+
+        <button class="btn-new"><i class="ion-ios-plus-outline"></i>Reset</button>
+        <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+        <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+
+        <img src="{% static 'img/dice_img/dice-5.png'%}" alt="Dice" class="dice">
+    </div>
+</section>
+<script type="text/javascript" src="{% static 'js/dice.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/scroll.js' %}"></script>
+</body>
+</html>
